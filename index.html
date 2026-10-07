@@ -30,7 +30,7 @@ nav a{padding:2px 0;border-bottom:2px solid transparent}nav a.on,nav a:hover{bor
 .cup{justify-self:center;width:min(230px,60%);filter:drop-shadow(0 25px 25px #0008)}
 .arr{position:absolute;top:45%;background:none;border:0;color:var(--cr);font-size:34px;cursor:pointer}
 .dots{position:absolute;bottom:80px;left:50%;display:flex;gap:6px}.dots i{width:7px;height:7px;border-radius:50%;background:var(--cr);opacity:.5}.dots i:first-child{opacity:1}
-.pat{height:92px;background:url("images/pattern.webp") repeat-x bottom/auto 100%;position:absolute;bottom:0;left:0;right:0}
+.pat{height:92px;background:url("images/img01.webp") repeat-x bottom/auto 100%;position:absolute;bottom:0;left:0;right:0}
 section{max-width:1150px;margin:auto;padding:44px 22px}
 h2{font-family:Amiri,serif;font-size:34px;margin:0;text-align:center}.sub{text-align:center;margin:0 0 26px;font-size:14px;opacity:.75}
 .cats{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin-bottom:34px}
@@ -48,7 +48,7 @@ h2{font-family:Amiri,serif;font-size:34px;margin:0;text-align:center}.sub{text-a
 .add:hover{background:var(--br)}
 .ab{position:relative;background:var(--dk);color:var(--cr);max-width:none;padding:0}
 .abi{max-width:1150px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;padding:56px 22px 100px}
-.beans{height:240px;border-radius:12px;background:url("images/about-art.webp") center/cover;box-shadow:0 6px 18px #0006}
+.beans{height:240px;border-radius:12px;background:url("images/img02.webp") center/cover;box-shadow:0 6px 18px #0006}
 .ab h2{text-align:right}.ab h3{font-size:16px;margin:4px 0}.ab p{font-size:14px;margin:0 0 18px}
 footer{background:var(--dk);color:var(--cr);text-align:center;padding:36px 22px 90px;position:relative}
 .nl{display:flex;max-width:340px;margin:14px auto;border:1px solid var(--gd);border-radius:5px;overflow:hidden}
@@ -61,6 +61,7 @@ footer{background:var(--dk);color:var(--cr);text-align:center;padding:36px 22px 
 .it .t{width:52px;height:52px;border-radius:6px;background:var(--br);display:grid;place-items:center;font-size:26px}
 .it div:nth-child(2){flex:1;font-size:14px}
 .q button{width:24px;height:24px;border:1px solid var(--br);background:none;border-radius:4px;cursor:pointer}
+.dnote{background:var(--cd);border:1px dashed var(--gd);color:var(--br);border-radius:10px;padding:9px 12px;font-size:13px;margin:10px 0 0;display:flex;gap:6px;align-items:center}
 .tot{display:flex;justify-content:space-between;font-weight:700;margin:14px 0}
 :focus-visible{outline:3px solid var(--gd);outline-offset:2px}
 .ic .hm{display:none}.ml a.mo{display:none}@media(max-width:700px){.ic .hm{display:inline-flex}.ml a.mo{display:block}nav{display:none}.ic{margin-inline-start:auto}.hin,.abi{grid-template-columns:1fr;padding-inline:22px;text-align:center}.ab h2{text-align:center}.arr{display:none}}
@@ -171,7 +172,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-43px;height:44px
 .ml>*{animation:mmi .28s both}
 .ml>*:nth-child(1){animation-delay:25ms}.ml>*:nth-child(2){animation-delay:50ms}.ml>*:nth-child(3){animation-delay:75ms}.ml>*:nth-child(4){animation-delay:100ms}.ml>*:nth-child(5){animation-delay:125ms}.ml>*:nth-child(6){animation-delay:150ms}.ml>*:nth-child(7){animation-delay:175ms}.ml>*:nth-child(8){animation-delay:200ms}.ml>*:nth-child(9){animation-delay:225ms}.ml>*:nth-child(10){animation-delay:250ms}.ml>*:nth-child(11){animation-delay:275ms}
 @media(prefers-reduced-motion:reduce){.ml>*{animation:none}.mi{transition:none}}
-.k8{background:linear-gradient(135deg,#4f8a5b,#2c5a37)}.k9{background:linear-gradient(135deg,#c98a5b,#8f5a36)}.k10{background:linear-gradient(135deg,#b56a7a,#7d3f4e)}
+.k8{background:linear-gradient(135deg,#4f8a5b,#2c5a37)}.k9{background:linear-gradient(135deg,#c98a5b,#8f5a36)}.k10{background:linear-gradient(135deg,#b56a7a,#7d3f4e)}.k11{background:linear-gradient(135deg,#d9a441,#9a6a1f)}
 #milkw{position:relative;justify-self:center;width:min(100%,380px);padding:14px 0 26px}
 #milk{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 60%;display:block;border-radius:26px 26px 90px 26px;border:3px solid var(--gd);transform:rotate(-3deg);box-shadow:14px 16px 0 #c3965433,0 22px 40px #000a}
 .mtag{position:absolute;top:0;right:-6px;z-index:2;background:var(--gd);color:var(--dk);font-weight:700;font-size:14px;padding:2px 16px;border-radius:20px;transform:rotate(4deg);box-shadow:0 4px 10px #0006}
@@ -188,17 +189,71 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-43px;height:44px
 .cat span img.full{padding:0;object-fit:cover}
 
 
+
+.mopt{margin:14px 0 4px}.mopt .ol{font-weight:700;font-size:15px;color:var(--dk);margin-bottom:8px}
+#mchips{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chip{display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-align:right;border:1.5px solid #3a1d0e33;background:var(--cr);color:var(--dk);border-radius:14px;padding:10px 12px;font:inherit;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.chip b{font-size:16px;line-height:1.3}.chip span{font-size:12.5px;line-height:1.55}.chip small{font-size:11.5px;opacity:.72;line-height:1.5;margin-top:2px;padding-top:4px;border-top:1px solid #3a1d0e22;width:100%}
+.chip.on{background:var(--br);color:var(--cr);border-color:var(--br)}.chip.on small{border-top-color:#f0dcbb44;opacity:.85}
+.mrow{position:sticky;bottom:0;background:var(--cd);padding:10px 0 4px;margin-top:10px}
+.cb2:disabled{opacity:.6;cursor:not-allowed}
+
+/* games v2 */
+#gbody{padding:0 18px 22px}
+.gint{margin:0 0 14px;font-size:14px;opacity:.75}
+.gb{position:relative;display:flex;align-items:center;gap:14px;width:100%;padding:12px 12px 12px 16px;border:1px solid #c3965455;border-radius:20px;background:linear-gradient(135deg,#2a1a10,#4a2e1c);color:var(--cr);font:600 17px Cairo,sans-serif;margin-bottom:12px;cursor:pointer;text-align:right;box-shadow:0 6px 16px #3a1d0e33;transition:transform .15s}
+.gb.g2{background:linear-gradient(135deg,#2a1a10,#37494a)}
+.gb:hover{background:linear-gradient(135deg,#3a2314,#5a3a24)}.gb.g2:hover{background:linear-gradient(135deg,#3a2314,#43595a)}
+.gb:active{transform:scale(.985)}
+.gb .gt{flex:none;width:68px;height:68px;border-radius:16px;background:#ffffff14;display:grid;place-items:center}.gb .gt svg{width:56px;height:56px}
+.gb b{display:block;font-family:Amiri,serif;font-size:23px;line-height:1.3;color:var(--gd)}
+.gb small{display:block;font-weight:400;font-size:13px;opacity:.85;margin-top:2px}
+.gb em{display:inline-block;font-style:normal;font-weight:600;font-size:11.5px;background:#ffffff1c;border-radius:10px;padding:0 10px;margin-top:6px}
+.gb .ch{margin-inline-start:auto;font-size:26px;opacity:.6;flex:none}
+.gs{display:flex;gap:8px;margin:0 0 14px}.gs div{flex:1;background:var(--cr);border-radius:12px;padding:6px 4px;text-align:center;line-height:1.35;font-size:12px}.gs b{display:block;font-size:19px;color:var(--br)}
+.gs svg{width:20px;height:16px;vertical-align:-3px}.sc{fill:var(--br)}.sp{fill:#2f6b4f}
+.gf{display:flex;gap:8px;justify-content:center;margin-top:14px}
+.gk{padding:6px 18px;background:var(--cr);border:0;font-weight:600}.gk:hover{background:var(--gd)}.gk.pr{background:var(--dk);color:var(--cr)}.gk.pr:hover{background:var(--br)}
+.gg{gap:9px}
+.gc{aspect-ratio:1;border:0;border-radius:12px;background:none;perspective:600px;padding:0;cursor:pointer;font-size:34px;display:block;position:relative;color:var(--dk)}
+.gc .cf{position:absolute;inset:0;transition:transform .35s;transform-style:preserve-3d}
+.gc.on .cf,.gc.ok .cf{transform:rotateY(180deg)}
+.gc .bk,.gc .fr,.gc.on .bk,.gc.ok .bk,.gc.on .fr,.gc.ok .fr{position:absolute;inset:0;display:grid;place-items:center;border-radius:12px;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.gc .bk{background:linear-gradient(145deg,#3a2314,#2a1a10);box-shadow:inset 0 0 0 2px #c3965466,0 3px 6px #3a1d0e30}
+.gc .bk svg{width:58%;height:auto;fill:var(--gd);opacity:.85}
+.gc .fr{transform:rotateY(180deg);background:var(--cd);box-shadow:inset 0 0 0 2px var(--gd)}
+.gc.ok .fr{background:var(--gd);box-shadow:none;animation:okp .4s .3s}
+@keyframes okp{50%{transform:rotateY(180deg) scale(1.1)}}
+.gc.on,.gc.ok{background:none}
+.gc:not(.on):not(.ok):hover .bk{background:linear-gradient(145deg,#4a2e1c,#2a1a10)}
+.g3{gap:8px;max-width:310px}
+.gx{aspect-ratio:1;border:0;border-radius:16px;background:var(--cr);box-shadow:inset 0 -3px 0 #3a1d0e22;cursor:pointer;padding:8px;display:grid;place-items:center;transition:background .15s}
+.gx:not(:disabled):hover{background:var(--bg)}.gx:disabled{cursor:default}
+.gx svg{width:100%;height:auto;animation:mk .22s ease-out}@keyframes mk{from{transform:scale(.4);opacity:0}}
+.gx.w{background:var(--gd);box-shadow:none}.gx.w .sc,.gx.w .sp{fill:var(--dk)}
+.gm{text-align:center;margin:14px 0 2px;font-weight:700;color:var(--br);min-height:26px;font-size:15px}
+.gm.win{background:var(--dk);color:var(--gd);border-radius:12px;padding:8px 12px}
+@media(prefers-reduced-motion:reduce){.gc .cf,.gx svg,.gc.ok .fr{transition:none;animation:none}}
+.c4{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;direction:ltr;background:var(--br);padding:6px;border-radius:14px}
+.c4c{display:grid;grid-template-rows:repeat(6,1fr);gap:4px;background:none;border:0;padding:0;cursor:pointer}
+.c4d{aspect-ratio:1;border-radius:50%;background:var(--cd);display:grid;place-items:center;font-size:clamp(13px,4.2vw,22px);line-height:1;box-shadow:inset 0 2px 3px #0004}
+.c4c:hover .c4d:not(.p1):not(.p2){background:var(--cr)}
+.c4d.p1{background:var(--cr);animation:c4f .3s ease-in}.c4d.p2{background:#8fd1ab;animation:c4f .3s ease-in}.c4d.w{background:var(--gd);box-shadow:0 0 0 3px var(--dk)}
+@keyframes c4f{from{transform:translateY(-110px);opacity:0}}
+.rps{display:flex;gap:10px;justify-content:center;margin-top:14px}.rps button{flex:1;max-width:96px;aspect-ratio:1;border:0;border-radius:16px;background:var(--cr);font-size:40px;cursor:pointer;padding:0}.rps button:hover{background:var(--gd)}
+.rv{display:flex;justify-content:center;align-items:center;gap:16px;font-size:56px;min-height:80px;margin-top:6px}.rv small{font-size:14px;color:var(--br);font-weight:700}
+@media(prefers-reduced-motion:reduce){.c4d.p1,.c4d.p2{animation:none}}
 </style></head><body>
-<svg width="0" height="0" style="position:absolute"><symbol id="palm" viewBox="0 0 100 80"><path d="M50 36C30 24 14 26 3 36C22 30 38 34 50 36ZM50 36C70 24 86 26 97 36C78 30 62 34 50 36ZM50 36C40 22 28 10 14 6C32 12 44 24 50 36ZM50 36C60 22 72 10 86 6C68 12 56 24 50 36ZM50 36C42 46 38 60 42 76C50 62 54 48 50 36ZM50 36C58 46 62 60 58 76C50 62 46 48 50 36Z"/></symbol></svg>
+<svg width="0" height="0" style="position:absolute"><symbol id="palm" viewBox="0 0 100 80"><path d="M50 36C30 24 14 26 3 36C22 30 38 34 50 36ZM50 36C70 24 86 26 97 36C78 30 62 34 50 36ZM50 36C40 22 28 10 14 6C32 12 44 24 50 36ZM50 36C60 22 72 10 86 6C68 12 56 24 50 36ZM50 36C42 46 38 60 42 76C50 62 54 48 50 36ZM50 36C58 46 62 60 58 76C50 62 46 48 50 36Z"/></symbol><symbol id="cup" viewBox="0 0 100 80"><path d="M16 26h58v18a24 24 0 0 1-24 24H40a24 24 0 0 1-24-24zM74 31h5a10 10 0 0 1 0 20h-9v-6h9a4 4 0 0 0 0-8h-5zM8 70h74v6H8zM34 4c-5 5 5 8 0 14h5c5-6-5-9 0-14zM50 2c-5 5 5 8 0 14h5c5-6-5-9 0-14z"/></symbol></svg>
 <header><div class="bar">
-<a class="lg" href="#/" data-r="home"><img decoding="async" src="images/logo.webp" alt="كيف KEAF Coffee House"></a>
+<a class="lg" href="#/" data-r="home"><img decoding="async" src="images/img03.webp" alt="كيف KEAF Coffee House"></a>
 <nav><a class="on" href="#/" data-r="home">الرئيسية</a><a href="#/products" data-r="products">المنيو</a><a href="#/about" data-r="about">من نحن</a><a href="#/contact" data-r="contact">تواصل معنا</a></nav>
 <div class="ic"><button class="hm" aria-label="القائمة" aria-haspopup="dialog" aria-expanded="false" onclick="mm(true)"><svg class="i" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><button onclick="tog()" aria-label="السلة"><svg class="i" viewBox="0 0 24 24"><path d="M5.2 8.5h13.6l-1.1 10.4a1.6 1.6 0 01-1.6 1.4H7.9a1.6 1.6 0 01-1.6-1.4z"/><path d="M8.8 8.5V7a3.2 3.2 0 016.4 0v1.5"/></svg><span id="cnt">0</span></button></div>
 </div></header>
 
 <div class="hero" id="top" data-page="home"><div class="hin" id="hin">
 <div><h1 id="h1">قهوة بطعم مختلف</h1><p id="hp">مذاق أصيل .. في كل كوب</p><a class="btn" href="#/products" data-r="products">تسوق الآن ←</a></div>
-<div id="alt" class="cup" style="display:none;font-size:150px;text-align:center;line-height:1"></div><img id="cupsvg" class="cup" src="images/hero-cup.webp" alt="كوب كيف"><img id="cupice" class="cup" style="display:none" src="images/hero-cup-ice.webp" alt="كولد كوفي كرامل كيف"><div id="milkw" style="display:none"><span class="mtag">ميلك شيك كيف</span><img id="milk" src="images/hero-milkshake.webp" alt="ميلك شيك لوتس وفستق وفراولة وشوكولاتة"><div class="mch"><i>لوتس</i><i>فستق</i><i>فراولة</i><i>شوكولاتة</i></div></div>
+<div id="alt" class="cup" style="display:none;font-size:150px;text-align:center;line-height:1"></div><img id="cupsvg" class="cup" src="images/img04.webp" alt="كوب كيف"><img id="cupice" class="cup" style="display:none" src="images/img05.webp" alt="كولد كوفي كرامل كيف"><div id="milkw" style="display:none"><span class="mtag">ميلك شيك كيف</span><img id="milk" src="images/img06.webp" alt="ميلك شيك لوتس وفستق وفراولة وشوكولاتة"><div class="mch"><i>لوتس</i><i>فستق</i><i>فراولة</i><i>شوكولاتة</i></div></div>
 </div><button class="arr" id="pv" style="right:18px" aria-label="السابق">›</button><button class="arr" id="nx" style="left:18px" aria-label="التالي">‹</button><div class="dots" id="dots"></div><div class="pat"></div></div>
 
 <section data-page="home" id="feat-s"><h2>الأكثر طلباً</h2><p class="sub">أصناف يحبها زوارنا</p><div class="g" id="feat"></div><p style="text-align:center;margin-top:24px"><a class="btn" style="background:var(--dk);color:var(--cr)" href="#/products">عرض كل المنيو ←</a></p></section>
@@ -228,7 +283,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-43px;height:44px
 <form onsubmit="return cf(event)" style="display:grid;gap:12px">
 <input required placeholder="الاسم" aria-label="الاسم" class="fi"><input required type="tel" placeholder="رقم الهاتف" aria-label="رقم الهاتف" class="fi"><textarea required rows="5" placeholder="رسالتك" aria-label="رسالتك" class="fi"></textarea>
 <button class="btn" style="justify-content:center;background:var(--dk);color:var(--cr)">إرسال</button></form></section>
-<footer><img decoding="async" src="images/logo.webp" alt="كيف KEAF Coffee House" style="height:110px"><div class="soc"><a href="https://www.instagram.com/keaf_iq" target="_blank" rel="noopener" aria-label="إنستغرام كيف"><svg class="i" viewBox="0 0 24 24" style="width:17px;height:17px"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".8" fill="currentColor"/></svg></a><a href="https://www.tiktok.com/@keaf_iq" target="_blank" rel="noopener" aria-label="تيك توك كيف"><svg class="i" viewBox="0 0 24 24" style="width:17px;height:17px"><path d="M14 3v11.2a3.7 3.7 0 11-3.7-3.7"/><path d="M14 3c.3 2.6 2 4.4 5 4.7"/></svg></a></div>
+<footer><img decoding="async" src="images/img03.webp" alt="كيف KEAF Coffee House" style="height:110px"><div class="soc"><a href="https://www.instagram.com/keaf_iq" target="_blank" rel="noopener" aria-label="إنستغرام كيف"><svg class="i" viewBox="0 0 24 24" style="width:17px;height:17px"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".8" fill="currentColor"/></svg></a><a href="https://www.tiktok.com/@keaf_iq" target="_blank" rel="noopener" aria-label="تيك توك كيف"><svg class="i" viewBox="0 0 24 24" style="width:17px;height:17px"><path d="M14 3v11.2a3.7 3.7 0 11-3.7-3.7"/><path d="M14 3c.3 2.6 2 4.4 5 4.7"/></svg></a></div>
 <div class="fl"><a href="#/" data-r="home">الرئيسية</a><a href="#/products" data-r="products">المنيو</a><a href="#/about" data-r="about">من نحن</a><a href="#/contact" data-r="contact">تواصل معنا</a></div>
 <p style="font-size:14px;margin:6px 0"><a href="tel:+9647811113022" dir="ltr" style="font-weight:700">0781 111 3022</a></p>
 <p style="font-size:12px;opacity:.7">@keaf_iq · جميع الحقوق محفوظة © 2026 كيف</p><div class="pat"></div></footer>
@@ -236,6 +291,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-43px;height:44px
 <div id="mov" class="ov" hidden onclick="if(event.target===this)mc()"><div class="mdl" role="dialog" aria-modal="true" aria-labelledby="mt">
 <button class="xb mx" id="mxb" onclick="mc()" aria-label="إغلاق">×</button><div class="mph" id="mph"></div>
 <div class="mbd"><div class="mh"><h2 id="mt"></h2></div><span class="tag" id="mtag"></span><p id="mdsc" hidden></p><div class="mpr" id="mpr"></div>
+<div class="mopt" id="mopt" hidden><div class="ol" id="mol"></div><div id="mchips" role="group" aria-labelledby="mol"></div></div>
 <div class="mrow"><div class="stp big"><button onclick="mq(-1)" aria-label="إنقاص">−</button><b id="mqn">1</b><button onclick="mq(1)" aria-label="زيادة">+</button></div><button class="btn cb2" id="mab" onclick="ma()"></button></div></div></div></div>
 <div id="mov2" class="ov" hidden onclick="if(event.target===this)mm(false)"><div class="mdl mm" role="dialog" aria-modal="true" aria-labelledby="mmt"><div class="grab" aria-hidden="true"></div><div class="dh"><h2 id="mmt">المزيد</h2><button class="xb" id="mmx" onclick="mm(false)" aria-label="إغلاق">×</button></div>
 <div class="mst" id="mst" aria-live="polite"></div>
@@ -245,7 +301,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-43px;height:44px
 <div id="gov" class="ov" hidden onclick="if(event.target===this)gClose()"><div class="mdl" role="dialog" aria-modal="true" aria-labelledby="gt"><div class="dh"><h2 id="gt">ألعاب كيف</h2><button class="xb" id="gx" onclick="gClose()" aria-label="إغلاق">×</button></div><div id="gbody"></div></div></div>
 <aside id="dr" aria-label="سلة التسوق">
 <div class="dh"><h2 id="dt">سلة التسوق</h2><button class="xb" onclick="tog()" aria-label="إغلاق">×</button></div>
-<div class="v on" id="v1"><div id="its"></div><button type="button" class="clrb" id="cbtn" onclick="clrC(1)" hidden>إفراغ السلة</button><div id="cfm" hidden><span>إفراغ كل الأصناف؟</span><button type="button" class="cy" onclick="clrC(2)">نعم، أفرغ</button><button type="button" class="cn" onclick="clrC(0)">إلغاء</button></div><div class="tot"><span>المجموع الكلي</span><span id="tot"></span></div><button class="btn cb" id="gob" onclick="sv(2)">متابعة الطلب</button></div>
+<div class="v on" id="v1"><div id="its"></div><button type="button" class="clrb" id="cbtn" onclick="clrC(1)" hidden>إفراغ السلة</button><div id="cfm" hidden><span>إفراغ كل الأصناف؟</span><button type="button" class="cy" onclick="clrC(2)">نعم، أفرغ</button><button type="button" class="cn" onclick="clrC(0)">إلغاء</button></div><div class="dnote"><span aria-hidden="true">🛵</span><span>سعر التوصيل 2000 دينار</span></div><div class="tot"><span>المجموع الكلي</span><span id="tot"></span></div><button class="btn cb" id="gob" onclick="sv(2)">متابعة الطلب</button></div>
 <form class="v" id="v2" novalidate onsubmit="return sub(event)">
 <div class="ff"><label for="fn">الاسم (اختياري)</label><input class="fi" id="fn" autocomplete="name" placeholder="اسمك الكامل"><span class="er" id="en"></span></div>
 <div class="ff"><label for="fp">رقم الهاتف</label><input class="fi" id="fp" type="tel" inputmode="tel" autocomplete="tel" placeholder="07XXXXXXXXX" dir="ltr" style="text-align:right"><span class="er" id="ep"></span></div>
@@ -275,90 +331,101 @@ const D=[["المشروبات الساخنة","☕",[["إسبريسو سنكل",
 ["العصائر الطبيعية","🍊",[["عصير برتقال",4000],["مكس حمضيات",5000],["ليمون ونعناع",4000],["مكس كيف",5000]]],
 ["مشروبات الطاقة","⚡",[["مكسيكي كيف",5000],["مكسيكي رمان",4000],["مكسيكي فراولة",4000],["مكسيكي ليمون",4000]]],
 ["الكريب","🥞",[["كريب بستاشيو",5000],["كريب لوتس",4000],["كريب نوتيلا",4000],["كريب فواكه",5000]]],
-["الكيك","🍰",[["كوكيز",2000],["ميني بان كيك",4000],["تجيز كيك",4000],["بروانيز",4000],["سان سباستيان",5000],["سكوب كوكيز",5000],["موس كيك",3500],["جوكليت كيك",3000]]]];
+["الكيك","🍰",[["كوكيز",2000],["ميني بان كيك",4000],["تجيز كيك",4000],["بروانيز",4000],["سان سباستيان",5000],["سكوب كوكيز",5000],["موس كيك",3500],["جوكليت كيك",3000],["تراميسو",2000],["أم علي",3500]]],
+["المعجنات","🥐",[["كرواسون سادة",3000],["كرواسون نوتيلا",3500],["كرواسون لوتس",3500],["كرواسون بستاشيو",3500],["سندويش دجاج",3500],["سندويش مارتديلا",3500]]]];
 const P=D.flatMap(([c,e,L])=>L.map(([n,p])=>({n,p,c,e})));
+const OPT={"V 60":{l:"نوع البن",b:"اختر النوع",d:[["كولومبي","كريم · عسل · سكر بني · لوز"],["إثيوبي","فواكه حمضية · خوخ"],["برازيلي كت كات","شوكولاتة · فانيليا · كراميل · بندق"]]},"قهوة تركية":{l:"درجة السكر",b:"اختر الدرجة",d:[["سادة","بدون سكر"],["وسط","سكر خفيف"],["حلوة","سكر زيادة"]]}};OPT["قهوة فرنسية"]=OPT["قهوة تركية"];P.forEach(x=>{const o=OPT[x.n];if(o){x.ol=o.l;x.ob=o.b;x.od=o.d;x.o=o.d.map(a=>a[0])}});
+P.find(x=>x.n=="كرواسون بستاشيو").img="images/img07.webp";
+P.find(x=>x.n=="كرواسون لوتس").img="images/img08.webp";
+P.find(x=>x.n=="كرواسون نوتيلا").img="images/img09.webp";
+P.find(x=>x.n=="أم علي").img="images/img10.webp";
+P.find(x=>x.n=="تراميسو").img="images/img11.webp";
+P.find(x=>x.n=="سندويش مارتديلا").img="images/img12.webp";
+P.find(x=>x.n=="سندويش دجاج").img="images/img13.webp";
+P.find(x=>x.n=="كرواسون سادة").img="images/img14.webp";
 ["المشروبات الساخنة|سبانش لاتيه","الفرابيه|فرابيه موكا","الميلك شيك|ميلك شيك أوريو","الموهيتو|موهيتو مكس توت"].forEach(k=>{const [c,n]=k.split("|");P.find(x=>x.c==c&&x.n==n).f=1});
-P.find(x=>x.n=="موهيتو فراولة").img="images/products/p50.webp";
-P.find(x=>x.n=="موهيتو مكس كيف").img="images/products/p46.webp";P.find(x=>x.n=="موهيتو مكس كيف").d="فواكه خاصة + ليمون + نعناع + سفن آب + ثلج";
-P.find(x=>x.n=="موهيتو مكس توت").img="images/products/p45.webp";P.find(x=>x.n=="موهيتو مكس توت").d="فراولة + توت أزرق + توت أحمر + ليمون + سفن آب + ثلج";
-P.find(x=>x.n=="موهيتو ليمون ونعناع").img="images/products/p47.webp";P.find(x=>x.n=="موهيتو ليمون ونعناع").d="ليمون + نعناع + سفن آب + ثلج";
-P.find(x=>x.n=="موهيتو رمان").img="images/products/p48.webp";P.find(x=>x.n=="موهيتو رمان").d="رمان + سيروب رمان + ليمون + نعناع + سفن آب + ثلج";
-P.find(x=>x.n=="موهيتو بلو").img="images/products/p49.webp";P.find(x=>x.n=="موهيتو بلو").d="سيروب بلو + ليمون + نعناع + سفن آب + ثلج";
-P.find(x=>x.n=="قهوة جكليتية").img="images/products/p12.webp";
-P.find(x=>x.n=="قهوة بندق").img="images/products/p14.webp";
-P.find(x=>x.n=="قهوة نوتيلا").img="images/products/p13.webp";
-P.find(x=>x.n=="قهوة فرنسية").img="images/products/p11.webp";
-P.find(x=>x.n=="قهوة تركية").img="images/products/p01.webp";
-P.find(x=>x.n=="أمريكانو").img="images/products/p02.webp";
-P.find(x=>x.n=="هوت جوكليت").img="images/products/p08.webp";
-P.find(x=>x.n=="ايس تي").img="images/products/p34.webp";
-P.find(x=>x.n=="عصير برتقال").img="images/products/p56.webp";
-P.find(x=>x.n=="مكس حمضيات").img="images/products/p57.webp";
-P.find(x=>x.n=="ليمون ونعناع").img="images/products/p58.webp";
-P.find(x=>x.n=="سموذي مكس توت").img="images/products/p51.webp";
-P.find(x=>x.n=="سموذي منكا").img="images/products/p52.webp";
-P.find(x=>x.n=="سموذي رمان").img="images/products/p53.webp";
-P.find(x=>x.n=="سموذي بلو").img="images/products/p54.webp";
-P.find(x=>x.n=="سموذي فراولة").img="images/products/p55.webp";
-P.find(x=>x.n=="شاي بالنعناع").img="images/products/p22.webp";
-P.find(x=>x.n=="شاي كرك").img="images/products/p23.webp";
-P.find(x=>x.n=="ميلك شيك أوريو").img="images/products/p39.webp";
-P.find(x=>x.n=="ميلك شيك كندر").img="images/products/p40.webp";
-P.find(x=>x.n=="ميلك شيك فراولة").img="images/products/p41.webp";
-P.find(x=>x.n=="ميلك شيك لوتس").img="images/products/p42.webp";
-P.find(x=>x.n=="ميلك شيك نوتيلا").img="images/products/p43.webp";
-P.find(x=>x.n=="ميلك شيك بستاشيو").img="images/products/p44.webp";
-P.find(x=>x.n=="أمريكانو بارد").img="images/products/p33.webp";
-P.find(x=>x.n=="إسبريسو كيف").img="images/products/p19.webp";
-P.find(x=>x.n=="V 60").img="images/products/p24.webp";
-P.find(x=>x.n=="Cold Brew").img="images/products/p24.webp";
-P.find(x=>x.n=="سبانش لاتيه بارد").img="images/products/p26.webp";
-P.find(x=>x.n=="بندق لاتيه بارد").img="images/products/p27.webp";
-P.find(x=>x.n=="كراميل لاتيه بارد").img="images/products/p28.webp";
-P.find(x=>x.n=="كراميل لاتيه").img="images/products/p05.webp";
-P.find(x=>x.n=="موكا لاتيه بارد").img="images/products/p30.webp";
-P.find(x=>x.n=="إسبريسو مارتيني").img="images/products/p31.webp";
-P.find(x=>x.n=="إسبريسو فريدو").img="images/products/p32.webp";
-P.find(x=>x.n=="فانيلا لاتيه بارد").img="images/products/p05.webp";
-P.find(x=>x.n=="إسبريسو سنكل").img="images/products/p15.webp";
-P.find(x=>x.n=="إسبريسو دبل").img="images/products/p16.webp";
-P.find(x=>x.n=="ماكياتو").img="images/products/p17.webp";
-P.find(x=>x.n=="كورتادو").img="images/products/p18.webp";
-P.find(x=>x.n=="فلات وايت").img="images/products/p20.webp";
-P.find(x=>x.n=="كابتشينو").img="images/products/p09.webp";
-P.find(x=>x.n=="نسكافية").img="images/products/p10.webp";
-P.find(x=>x.n=="موكا لاتيه").img="images/products/p07.webp";
-P.find(x=>x.n=="فانيلا لاتيه").img="images/products/p06.webp";
-P.find(x=>x.n=="سبانش لاتيه"&&!x.img).img="images/products/p03.webp";
-P.find(x=>x.n=="بندق لاتيه").img="images/products/p04.webp";
-P.find(x=>x.n=="مكس كيف").img="images/products/p59.webp";
-P.find(x=>x.n=="شاي").img="images/products/p21.webp";
-P.find(x=>x.n=="كريب بستاشيو").img="images/products/p64.webp";
-P.find(x=>x.n=="كريب لوتس").img="images/products/p65.webp";
-P.find(x=>x.n=="كريب نوتيلا").img="images/products/p66.webp";
-P.find(x=>x.n=="كريب فواكه").img="images/products/p67.webp";
-P.find(x=>x.n=="كوكيز").img="images/products/p68.webp";
-P.find(x=>x.n=="ميني بان كيك").img="images/products/p69.webp";
-P.find(x=>x.n=="تجيز كيك").img="images/products/p70.webp";
-P.find(x=>x.n=="بروانيز").img="images/products/p71.webp";
-P.find(x=>x.n=="سان سباستيان").img="images/products/p72.webp";
-P.find(x=>x.n=="سكوب كوكيز").img="images/products/p73.webp";
-P.find(x=>x.n=="موس كيك").img="images/products/p74.webp";
-P.find(x=>x.n=="جوكليت كيك").img="images/products/p75.webp";
+P.find(x=>x.n=="موهيتو فراولة").img="images/img15.webp";
+P.find(x=>x.n=="موهيتو مكس كيف").img="images/img16.webp";P.find(x=>x.n=="موهيتو مكس كيف").d="فواكه خاصة + ليمون + نعناع + سفن آب + ثلج";
+P.find(x=>x.n=="موهيتو مكس توت").img="images/img17.webp";P.find(x=>x.n=="موهيتو مكس توت").d="فراولة + توت أزرق + توت أحمر + ليمون + سفن آب + ثلج";
+P.find(x=>x.n=="موهيتو ليمون ونعناع").img="images/img18.webp";P.find(x=>x.n=="موهيتو ليمون ونعناع").d="ليمون + نعناع + سفن آب + ثلج";
+P.find(x=>x.n=="موهيتو رمان").img="images/img19.webp";P.find(x=>x.n=="موهيتو رمان").d="رمان + سيروب رمان + ليمون + نعناع + سفن آب + ثلج";
+P.find(x=>x.n=="موهيتو بلو").img="images/img20.webp";P.find(x=>x.n=="موهيتو بلو").d="سيروب بلو + ليمون + نعناع + سفن آب + ثلج";
+P.find(x=>x.n=="قهوة جكليتية").img="images/img21.webp";
+P.find(x=>x.n=="قهوة بندق").img="images/img22.webp";
+P.find(x=>x.n=="قهوة نوتيلا").img="images/img23.webp";
+P.find(x=>x.n=="قهوة فرنسية").img="images/img24.webp";
+P.find(x=>x.n=="قهوة تركية").img="images/img25.webp";
+P.find(x=>x.n=="أمريكانو").img="images/img26.webp";
+P.find(x=>x.n=="هوت جوكليت").img="images/img27.webp";
+P.find(x=>x.n=="ايس تي").img="images/img28.webp";
+P.find(x=>x.n=="عصير برتقال").img="images/img29.webp";
+P.find(x=>x.n=="مكس حمضيات").img="images/img30.webp";
+P.find(x=>x.n=="ليمون ونعناع").img="images/img31.webp";
+P.find(x=>x.n=="سموذي مكس توت").img="images/img32.webp";
+P.find(x=>x.n=="سموذي منكا").img="images/img33.webp";
+P.find(x=>x.n=="سموذي رمان").img="images/img34.webp";
+P.find(x=>x.n=="سموذي بلو").img="images/img35.webp";
+P.find(x=>x.n=="سموذي فراولة").img="images/img36.webp";
+P.find(x=>x.n=="شاي بالنعناع").img="images/img37.webp";
+P.find(x=>x.n=="شاي كرك").img="images/img38.webp";
+P.find(x=>x.n=="ميلك شيك أوريو").img="images/img39.webp";
+P.find(x=>x.n=="ميلك شيك كندر").img="images/img40.webp";
+P.find(x=>x.n=="ميلك شيك فراولة").img="images/img41.webp";
+P.find(x=>x.n=="ميلك شيك لوتس").img="images/img42.webp";
+P.find(x=>x.n=="ميلك شيك نوتيلا").img="images/img43.webp";
+P.find(x=>x.n=="ميلك شيك بستاشيو").img="images/img44.webp";
+P.find(x=>x.n=="أمريكانو بارد").img="images/img45.webp";
+P.find(x=>x.n=="إسبريسو كيف").img="images/img46.webp";
+P.find(x=>x.n=="V 60").img="images/img47.webp";
+P.find(x=>x.n=="Cold Brew").img="images/img47.webp";
+P.find(x=>x.n=="سبانش لاتيه بارد").img="images/img48.webp";
+P.find(x=>x.n=="بندق لاتيه بارد").img="images/img49.webp";
+P.find(x=>x.n=="كراميل لاتيه بارد").img="images/img50.webp";
+P.find(x=>x.n=="كراميل لاتيه").img="images/img51.webp";
+P.find(x=>x.n=="موكا لاتيه بارد").img="images/img52.webp";
+P.find(x=>x.n=="إسبريسو مارتيني").img="images/img53.webp";
+P.find(x=>x.n=="إسبريسو فريدو").img="images/img54.webp";
+P.find(x=>x.n=="فانيلا لاتيه بارد").img="images/img51.webp";
+P.find(x=>x.n=="إسبريسو سنكل").img="images/img55.webp";
+P.find(x=>x.n=="إسبريسو دبل").img="images/img56.webp";
+P.find(x=>x.n=="ماكياتو").img="images/img57.webp";
+P.find(x=>x.n=="كورتادو").img="images/img58.webp";
+P.find(x=>x.n=="فلات وايت").img="images/img59.webp";
+P.find(x=>x.n=="كابتشينو").img="images/img60.webp";
+P.find(x=>x.n=="نسكافية").img="images/img61.webp";
+P.find(x=>x.n=="موكا لاتيه").img="images/img62.webp";
+P.find(x=>x.n=="فانيلا لاتيه").img="images/img63.webp";
+P.find(x=>x.n=="سبانش لاتيه"&&!x.img).img="images/img64.webp";
+P.find(x=>x.n=="بندق لاتيه").img="images/img65.webp";
+P.find(x=>x.n=="مكس كيف").img="images/img66.webp";
+P.find(x=>x.n=="شاي").img="images/img67.webp";
+P.find(x=>x.n=="كريب بستاشيو").img="images/img68.webp";
+P.find(x=>x.n=="كريب لوتس").img="images/img69.webp";
+P.find(x=>x.n=="كريب نوتيلا").img="images/img70.webp";
+P.find(x=>x.n=="كريب فواكه").img="images/img71.webp";
+P.find(x=>x.n=="كوكيز").img="images/img72.webp";
+P.find(x=>x.n=="ميني بان كيك").img="images/img73.webp";
+P.find(x=>x.n=="تجيز كيك").img="images/img74.webp";
+P.find(x=>x.n=="بروانيز").img="images/img75.webp";
+P.find(x=>x.n=="سان سباستيان").img="images/img76.webp";
+P.find(x=>x.n=="سكوب كوكيز").img="images/img77.webp";
+P.find(x=>x.n=="موس كيك").img="images/img78.webp";
+P.find(x=>x.n=="جوكليت كيك").img="images/img79.webp";
 
-P.find(x=>x.n=="مكسيكي كيف").img="images/products/p60.webp";
-P.find(x=>x.n=="مكسيكي ليمون").img="images/products/p63.webp";
-P.find(x=>x.n=="مكسيكي رمان").img="images/products/p61.webp";
-P.find(x=>x.n=="مكسيكي فراولة").img="images/products/p62.webp";
-const CI={"":"images/categories/all.webp","الفرابيه":"images/categories/frappe.webp","الميلك شيك":"images/categories/milkshake.webp","الحلى":"images/categories/desserts.webp","القهوة المختصة":"images/categories/specialty-coffee.webp","مشروبات الطاقة":"images/categories/energy-drinks.webp","العصائر الطبيعية":"images/categories/juices.webp","الموهيتو":"images/categories/mojito.webp","السموذي":"images/categories/smoothie.webp","المشروبات الباردة":"images/categories/cold-drinks.webp","المشروبات الساخنة":"images/categories/hot-drinks.webp"};
-P.find(x=>x.n=="فرابيه بستاشيو").img="images/products/p38.webp";
-P.find(x=>x.n=="فرابيه كراميل").img="images/products/p37.webp";
-P.find(x=>x.n=="فرابيه فانيلا").img="images/products/p36.webp";
-P.find(x=>x.n=="فرابيه موكا").img="images/products/p35.webp";
+P.find(x=>x.n=="مكسيكي كيف").img="images/img80.webp";
+P.find(x=>x.n=="مكسيكي ليمون").img="images/img81.webp";
+P.find(x=>x.n=="مكسيكي رمان").img="images/img82.webp";
+P.find(x=>x.n=="مكسيكي فراولة").img="images/img83.webp";
+const CI={"":"images/img84.webp","الفرابيه":"images/img85.webp","الميلك شيك":"images/img86.webp","الحلى":"images/img87.webp","القهوة المختصة":"images/img88.webp","مشروبات الطاقة":"images/img89.webp","العصائر الطبيعية":"images/img90.webp","الموهيتو":"images/img91.webp","السموذي":"images/img92.webp","المشروبات الباردة":"images/img93.webp","المشروبات الساخنة":"images/img94.webp"};
+P.find(x=>x.n=="فرابيه بستاشيو").img="images/img95.webp";
+P.find(x=>x.n=="فرابيه كراميل").img="images/img96.webp";
+P.find(x=>x.n=="فرابيه فانيلا").img="images/img97.webp";
+P.find(x=>x.n=="فرابيه موكا").img="images/img98.webp";
 const PAR={"الكريب":"الحلى","الكيك":"الحلى"};
 const C=[["","🍽️","الكل"],...D.filter(([c])=>!PAR[c]).map(([c,e])=>[c,e]),["الحلى","🍰"]];let cat="",cart={},view=1,busy=false;
+const pi=k=>parseInt(k),po=k=>{const t=String(k).split("_");return t.length>1?+t[1]:-1},kn=k=>P[pi(k)].n+(po(k)>=0?" - "+P[pi(k)].o[po(k)]:"");
 const f=n=>n.toLocaleString("ar-IQ")+" د.ع",cs=`<svg class="i" viewBox="0 0 24 24"><path d="M5.2 8.5h13.6l-1.1 10.4a1.6 1.6 0 01-1.6 1.4H7.9a1.6 1.6 0 01-1.6-1.4z"/><path d="M8.8 8.5V7a3.2 3.2 0 016.4 0v1.5"/></svg>`;
-function card(x,i,nm){const n=cart[i];return `<div class="p" onclick="mo(${i})"><div class="ph k${D.findIndex(d=>d[0]==x.c)}${x.img?" hasimg":""}">${x.img?`<img src="${x.img}" alt="${x.n}" loading="lazy">`:x.e}${x.f?'<span class="bdg">الأكثر طلباً</span>':''}</div><div class="pb" tabindex="0" role="button" aria-label="تفاصيل ${x.n}" onkeydown="if(event.key==='Enter')mo(${i})"><h3>${nm||x.n}</h3>${x.d?`<small>${x.d}</small>`:""}</div><div class="pf" onclick="event.stopPropagation()"><span class="pr">${f(x.p)}</span>${n?`<span class="stp"><button onclick="chg(${i},-1)" aria-label="إنقاص">−</button><b>${n}</b><button onclick="chg(${i},1)" aria-label="زيادة">+</button></span>`:`<button class="add" onclick="add(${i})">أضف ${cs}</button>`}</div></div>`}
+function card(x,i,nm){const n=x.o?0:cart[i];return `<div class="p" onclick="mo(${i})"><div class="ph k${D.findIndex(d=>d[0]==x.c)}${x.img?" hasimg":""}">${x.img?`<img src="${x.img}" alt="${x.n}" loading="lazy">`:x.e}${x.f?'<span class="bdg">الأكثر طلباً</span>':''}</div><div class="pb" tabindex="0" role="button" aria-label="تفاصيل ${x.n}" onkeydown="if(event.key==='Enter')mo(${i})"><h3>${nm||x.n}</h3>${x.d?`<small>${x.d}</small>`:""}</div><div class="pf" onclick="event.stopPropagation()"><span class="pr">${f(x.p)}</span>${n?`<span class="stp"><button onclick="chg(${i},-1)" aria-label="إنقاص">−</button><b>${n}</b><button onclick="chg(${i},1)" aria-label="زيادة">+</button></span>`:`<button class="add" onclick="add(${i})">${x.o?x.ob:"أضف"} ${cs}</button>`}</div></div>`}
 function drawFeat(){feat.innerHTML=P.map((x,i)=>[x,i]).filter(([x])=>x.f).map(([x,i])=>card(x,i)).join("")}
 function drawCats(){const sc=cats.scrollLeft;
 cats.innerHTML=C.map(([c,e,l])=>`<button class="cat${c==cat?' on':''}" onclick="setCat('${c}')" aria-pressed="${c==cat}"><span>${CI[c]?`<img class="${c?'':'full'}" src="${CI[c]}" alt="">`:e}</span>${l||c}</button>`).join("");cats.scrollLeft=sc}
@@ -368,11 +435,11 @@ const gs=[...new Set(L.map(([x])=>x.c))];
 grid.innerHTML=gs.map(g=>`<h3 class="gh">${PAR[g]?PAR[g]+" · ":""}${g}<em>${(n=>n==1?"صنف واحد":n+(n<=10?" أصناف":" صنفاً"))(L.filter(([x])=>x.c==g).length)}</em></h3><div class="g">${L.filter(([x])=>x.c==g).map(([x,i])=>card(x,i)).join("")}</div>`).join("")}
 function draw(){drawFeat();drawMenu()}
 function setCat(c){cat=c;drawMenu()}
-function add(i){cart[i]=(cart[i]||0)+1;upd();if(view!=1)sv(1);tst(i)}
-function chg(i,d){cart[i]+=d;if(cart[i]<1)delete cart[i];upd()}
+function add(i){if(P[i].o){mo(i);return}cart[i]=(cart[i]||0)+1;upd();if(view!=1)sv(1);tst(i)}
+function chg(k,d){cart[k]+=d;if(cart[k]<1)delete cart[k];upd()}
 function upd(){const k=Object.keys(cart);const tc=k.reduce((s,i)=>s+cart[i],0);cnt.textContent=cnt2.textContent=tc;cnt.hidden=cnt2.hidden=!tc;cbtn.hidden=!k.length;if(!k.length)cfm.hidden=true;
-its.innerHTML=k.length?k.map(i=>`<div class="it"><div class="t">${P[i].e}</div><div>${P[i].n}<br><small>${P[i].c}</small><br><b>${f(P[i].p)}</b></div><div class="q"><button onclick="chg(${i},1)">+</button> ${cart[i]} <button onclick="chg(${i},-1)">−</button></div></div>`).join(""):`<div class="emp2"><svg class="i big" viewBox="0 0 24 24"><path d="M5.2 8.5h13.6l-1.1 10.4a1.6 1.6 0 01-1.6 1.4H7.9a1.6 1.6 0 01-1.6-1.4z"/><path d="M8.8 8.5V7a3.2 3.2 0 016.4 0v1.5"/></svg><p>سلتك فارغة</p><button class="btn" onclick="dr.classList.remove('open');location.hash='#/products'">تصفح المنيو</button></div>`;
-const T=f(k.reduce((s,i)=>s+P[i].p*cart[i],0));tot.textContent=T;tot2.textContent=T;gob.disabled=!k.length;if(!k.length&&view==2)sv(1);draw()}
+its.innerHTML=k.length?k.map(i=>`<div class="it"><div class="t">${P[pi(i)].e}</div><div>${kn(i)}<br><small>${P[pi(i)].c}</small><br><b>${f(P[pi(i)].p)}</b></div><div class="q"><button onclick="chg('${i}',1)">+</button> ${cart[i]} <button onclick="chg('${i}',-1)">−</button></div></div>`).join(""):`<div class="emp2"><svg class="i big" viewBox="0 0 24 24"><path d="M5.2 8.5h13.6l-1.1 10.4a1.6 1.6 0 01-1.6 1.4H7.9a1.6 1.6 0 01-1.6-1.4z"/><path d="M8.8 8.5V7a3.2 3.2 0 016.4 0v1.5"/></svg><p>سلتك فارغة</p><button class="btn" onclick="dr.classList.remove('open');location.hash='#/products'">تصفح المنيو</button></div>`;
+const T=f(k.reduce((s,i)=>s+P[pi(i)].p*cart[i],0));tot.textContent=T;tot2.textContent=T;gob.disabled=!k.length;if(!k.length&&view==2)sv(1);draw()}
 function tog(){if(!dr.classList.contains("open")&&view==3)sv(1);dr.classList.toggle("open")}
 upd()
 
@@ -393,7 +460,7 @@ en.textContent='';ep.textContent=(d.length<10||d.length>13)?'اكتب رقم ه�
 fn.classList.toggle('bad',!!en.textContent);fp.classList.toggle('bad',!!ep.textContent);fa.classList.toggle('bad',!!ea.textContent);
 if(en.textContent||ep.textContent||ea.textContent){(en.textContent?fn:ep.textContent?fp:fa).focus();return false}
 if(!k.length){sv(1);return false}
-busy=true;const items=k.map(i=>({n:P[i].n,c:P[i].c,q:cart[i],t:P[i].p*cart[i]})),total=items.reduce((s,x)=>s+x.t,0),no='K-'+String(Date.now()).slice(-6);
+busy=true;const items=k.map(i=>({n:kn(i),c:P[pi(i)].c,q:cart[i],t:P[pi(i)].p*cart[i]})),total=items.reduce((s,x)=>s+x.t,0),no='K-'+String(Date.now()).slice(-6);
 try{localStorage.setItem('keaf_c',JSON.stringify({n,p,a}))}catch(x){}
 ok.innerHTML=`<div class="okc">✓</div><h3 style="text-align:center;margin:0">${n?"شكراً "+esc(n):"شكراً لك"}</h3><p style="text-align:center;margin:2px 0 8px">رقم الطلب: <b>${no}</b></p><div class="sm">${items.map(x=>`<div><span>${esc(x.n)} (${esc(x.c)}) × ${x.q}</span><span>${f(x.t)}</span></div>`).join('')}<div style="border-top:1px solid #3a1d0e22;margin-top:4px;padding-top:4px;font-weight:700"><span>المجموع</span><span>${f(total)}</span></div></div>${n?`<p class="dtl"><b>الاسم:</b> ${esc(n)}</p>`:""}<p class="dtl"><b>الهاتف:</b> <span dir="ltr">${esc(p)}</span></p><p class="dtl"><b>${fo.value=='1'?'الطلب':'العنوان'}:</b> ${fo.value=='1'?'استلام من المحل':esc(a)}</p>${m?`<p class="dtl"><b>ملاحظات:</b> ${esc(m)}</p>`:''}`;
 const pk=fo.value=='1',msg='طلب جديد من موقع كيف\nرقم الطلب: '+no+'\n\n'+items.map(x=>'• '+x.n+' × '+x.q+' = '+f(x.t)).join('\n')+'\n\nالمجموع: '+f(total)+'\n'+(n?'الاسم: '+n+'\n':'')+'الهاتف: '+p+'\n'+(pk?'الطلب: استلام من المحل':'العنوان: '+a)+(m?'\nملاحظات: '+m:''),u=waUrl(msg);
@@ -402,11 +469,12 @@ wo(u);
 cart={};fm.value='';upd();sv(3);busy=false;return false}
 addEventListener('keydown',e=>{if(e.key==='Escape'){mc();mm(false);gClose();dr.classList.remove('open')}});
 
-let cur=0,qty=1,lastF=null;
-function mo(i){cur=i;qty=1;const x=P[i];mdsc.textContent=x.d||'';mdsc.hidden=!x.d;mph.innerHTML=x.img?`<img src="${x.img}" alt="${x.n}">`:x.e;mph.className='mph k'+D.findIndex(d=>d[0]==x.c)+(x.img?' hasimg':'');mt.textContent=x.n;mtag.textContent=x.c;mpr.textContent=f(x.p);mq(0);lastF=document.activeElement;mov.hidden=false;document.body.style.overflow='hidden';setTimeout(()=>mxb.focus(),30)}
+let cur=0,qty=1,lastF=null,curO=-1;
+function mo(i){cur=i;qty=1;curO=-1;const x=P[i];mopt.hidden=!x.o;if(x.o){mol.textContent=x.ol;mchips.style.gridTemplateColumns=x.o.length==3?"repeat(3,1fr)":"";mchips.innerHTML=x.od.map((a,k)=>`<button type="button" class="chip" aria-pressed="false" onclick="mpick(${k})"><b>${a[0]}</b>${a[1]?`<span>${a[1]}</span>`:""}${a[2]?`<small>${a[2]}</small>`:""}</button>`).join("")}mdsc.textContent=x.d||'';mdsc.hidden=!x.d;mph.innerHTML=x.img?`<img src="${x.img}" alt="${x.n}">`:x.e;mph.className='mph k'+D.findIndex(d=>d[0]==x.c)+(x.img?' hasimg':'');mt.textContent=x.n;mtag.textContent=x.c;mpr.textContent=f(x.p);mq(0);lastF=document.activeElement;mov.hidden=false;document.body.style.overflow='hidden';setTimeout(()=>mxb.focus(),30)}
 function mc(){if(mov.hidden)return;mov.hidden=true;document.body.style.overflow='';if(lastF&&lastF.focus)try{lastF.focus()}catch(e){}}
-function mq(d){qty=Math.min(20,Math.max(1,qty+d));mqn.textContent=qty;mab.textContent='أضف إلى السلة · '+f(P[cur].p*qty)}
-function ma(){cart[cur]=(cart[cur]||0)+qty;upd();mc();if(view!=1)sv(1);tst(cur)}
+function mq(d){qty=Math.min(20,Math.max(1,qty+d));mqn.textContent=qty;const x=P[cur];if(x.o&&curO<0){mab.textContent='اختر '+x.ol+' أولاً';mab.disabled=true}else{mab.disabled=false;mab.textContent='أضف إلى السلة · '+f(x.p*qty)}}
+function mpick(k){curO=k;[...mchips.children].forEach((b,j)=>{b.classList.toggle('on',j==k);b.setAttribute('aria-pressed',j==k)});mq(0)}
+function ma(){const x=P[cur];if(x.o&&curO<0)return;const key=x.o?cur+"_"+curO:String(cur);cart[key]=(cart[key]||0)+qty;upd();mc();if(view!=1)sv(1);tst(cur,curO)}
 
 const CAF={lat:33.36122212633915,lon:43.814055313956366};let ranim=0;
 const nf=(n,d)=>n.toLocaleString('ar-IQ',{maximumFractionDigits:d});
@@ -471,31 +539,77 @@ const WA_NUMBER='9647811113022'; // ضع رقم واتساب بصيغة دولي
 let gT=null,gTm=0;
 function gOpen(){gov.hidden=false;document.body.style.overflow='hidden';gMenu();setTimeout(()=>gx.focus(),30)}
 function gClose(){if(gov.hidden)return;clearTimeout(gTm);gov.hidden=true;document.body.style.overflow=''}
-function gMenu(){clearTimeout(gTm);gt.textContent='ألعاب كيف';gbody.innerHTML='<p style="margin:0 0 12px;font-size:14px;opacity:.8">اختر لعبة للتسلية حتى يجهز طلبك</p><button class="gb" onclick="gMem()"><span>🫘</span><div>ذاكرة كيف<small>اقلب البطاقات وطابق الأزواج</small></div></button><button class="gb" onclick="gXO()"><span>☕</span><div>إكس أو بالقهوة<small>العب ضد الكافي: فنجانك ضد نخلته</small></div></button>'}
-function gMem(){clearTimeout(gTm);gt.textContent='ذاكرة كيف';const em=['☕','🫘','🧋','🍰','🥐','🍹'],deck=[...em,...em].sort(()=>Math.random()-.5);let op=[],lk=false,mv=0,fd=0;
-gbody.innerHTML=`<div class="gi"><span>الحركات: <b id="gmv">0</b></span><button onclick="gMem()">لعبة جديدة</button></div><div class="gg g4" id="gg">${deck.map((e,i)=>`<button class="gc" data-e="${e}" aria-label="بطاقة ${i+1}"><span class="bk"><svg viewBox="0 0 100 80"><use href="#palm"/></svg></span><span class="fr">${e}</span></button>`).join('')}</div><div class="gm" id="gmsg" aria-live="polite"></div><button class="gk" onclick="gMenu()">← القائمة</button>`;
+let gBest=0;try{gBest=+localStorage.getItem('keafBest')||0}catch(e){}
+const gCup='<svg class="mk" viewBox="0 0 100 80"><use class="sc" href="#cup"/></svg>',gPlm='<svg class="mk" viewBox="0 0 100 80"><use class="sp" href="#palm"/></svg>';
+function gMenu(){clearTimeout(gTm);gt.textContent='ألعاب كيف';
+const t1='<svg viewBox="0 0 56 56"><rect x="4" y="4" width="22" height="22" rx="6" fill="#2a1a10" stroke="#c39654" stroke-opacity=".5"/><rect x="30" y="4" width="22" height="22" rx="6" fill="#c39654"/><rect x="4" y="30" width="22" height="22" rx="6" fill="#c39654"/><rect x="30" y="30" width="22" height="22" rx="6" fill="#2a1a10" stroke="#c39654" stroke-opacity=".5"/><use href="#palm" x="9" y="10" width="12" height="10" fill="#c39654"/><use href="#palm" x="35" y="36" width="12" height="10" fill="#c39654"/></svg>';
+const t2='<svg viewBox="0 0 56 56"><path d="M19 4v48M37 4v48M4 19h48M4 37h48" stroke="#c39654" stroke-width="2.5" stroke-linecap="round"/><use href="#cup" x="3" y="4" width="15" height="12" fill="#f0dcbb"/><use href="#palm" x="20" y="21" width="16" height="13" fill="#8fd1ab"/><use href="#cup" x="39" y="39" width="15" height="12" fill="#f0dcbb"/></svg>';
+gbody.innerHTML=`<p class="gint">اختر لعبة للتسلية حتى يجهز طلبك</p><button class="gb" onclick="gMem()"><span class="gt">${t1}</span><div><b>ذاكرة كيف</b><small>اقلب البطاقات وطابق الأزواج</small><em>٦ أزواج${gBest?' · أفضل نتيجة '+gBest+' حركة':''}</em></div><span class="ch" aria-hidden="true">‹</span></button><button class="gb g2" onclick="gXO()"><span class="gt">${t2}</span><div><b>إكس أو بالقهوة</b><small>فنجانك ضد نخلة الكافي أو صاحبك</small><em>ضد الجهاز أو صاحبك</em></div><span class="ch" aria-hidden="true">‹</span></button><button class="gb" onclick="gC4()"><span class="gt"><svg viewBox="0 0 56 56"><rect x="3" y="6" width="50" height="44" rx="8" fill="#6b382b"/><circle cx="14" cy="17" r="5" fill="#f0dcbb"/><circle cx="28" cy="17" r="5" fill="#2a1a10"/><circle cx="42" cy="17" r="5" fill="#2a1a10"/><circle cx="14" cy="30" r="5" fill="#2a1a10"/><circle cx="28" cy="30" r="5" fill="#f0dcbb"/><circle cx="42" cy="30" r="5" fill="#8fd1ab"/><circle cx="14" cy="42" r="5" fill="#f0dcbb"/><circle cx="28" cy="42" r="5" fill="#8fd1ab"/><circle cx="42" cy="42" r="5" fill="#8fd1ab"/></svg></span><div><b>أربعة بصف</b><small>اجمع أربع قطع متتالية قبل خصمك</small><em>ضد الجهاز أو صاحبك</em></div><span class="ch" aria-hidden="true">‹</span></button><button class="gb g2" onclick="gRPS()"><span class="gt" style="font-size:30px;letter-spacing:2px">🪨✂️</span><div><b>حجر ورقة مقص</b><small>خمّن حركة خصمك</small><em>ضد الجهاز أو صاحبك</em></div><span class="ch" aria-hidden="true">‹</span></button>`}
+function gMem(){clearTimeout(gTm);gt.textContent='ذاكرة كيف';const em=['☕','🫘','🧋','🍰','🥐','🍹'],deck=[...em,...em];for(let i=deck.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[deck[i],deck[j]]=[deck[j],deck[i]]}let op=[],lk=false,mv=0,fd=0;
+gbody.innerHTML=`<div class="gs"><div>الحركات<b id="gmv">0</b></div><div>الأزواج<b id="gpr">0/6</b></div><div>أفضل نتيجة<b id="gbs">${gBest||'–'}</b></div></div><div class="gg g4" id="gg">${deck.map((e,i)=>`<button class="gc" data-e="${e}" aria-label="بطاقة ${i+1}"><span class="cf"><span class="bk"><svg viewBox="0 0 100 80"><use href="#palm"/></svg></span><span class="fr">${e}</span></span></button>`).join('')}</div><div class="gm" id="gmsg" aria-live="polite"></div><div class="gf"><button class="gk pr" onclick="gMem()">لعبة جديدة</button><button class="gk" onclick="gMenu()">القائمة</button></div>`;
 const cs=[...gg.children];cs.forEach(c=>c.onclick=()=>{if(lk||c.classList.contains('on')||c.classList.contains('ok'))return;c.classList.add('on');op.push(c);
-if(op.length==2){mv++;gmv.textContent=mv;const[a,b]=op;if(a.dataset.e==b.dataset.e){a.classList.replace('on','ok');b.classList.replace('on','ok');op=[];if(++fd==6)gmsg.textContent='أحسنت! أنهيت اللعبة في '+mv+' حركة ☕'}
+if(op.length==2){mv++;gmv.textContent=mv;const[a,b]=op;if(a.dataset.e==b.dataset.e){a.classList.replace('on','ok');b.classList.replace('on','ok');op=[];fd++;gpr.textContent=fd+'/6';if(fd==6){let nb='';if(!gBest||mv<gBest){gBest=mv;gbs.textContent=mv;nb=' · رقم قياسي جديد';try{localStorage.setItem('keafBest',mv)}catch(e){}}gmsg.className='gm win';gmsg.textContent='أحسنت! أنهيت اللعبة في '+mv+' حركة'+nb}}
 else{lk=true;gTm=setTimeout(()=>{a.classList.remove('on');b.classList.remove('on');op=[];lk=false},750)}}})}
 const GL=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
-function gXO(){clearTimeout(gTm);gt.textContent='إكس أو بالقهوة';if(!gT)gT={p:0,c:0,d:0};let b=Array(9).fill(''),end=false,busy=false;
-const win=m=>GL.find(l=>l.every(i=>b[i]==m));
-gbody.innerHTML=`<div class="gi"><span>أنت ☕ ${gT.p} · الكافي 🌴 ${gT.c} · تعادل ${gT.d}</span><button onclick="gXO()">جولة جديدة</button></div><div class="gg g3" id="gg">${b.map((_,i)=>`<button class="gx" aria-label="خانة ${i+1}"></button>`).join('')}</div><div class="gm" id="gmsg" aria-live="polite">دورك، ابدأ بفنجانك</div><button class="gk" onclick="gMenu()">← القائمة</button>`;
+const gN=m=>m?['اللاعب ١','اللاعب ٢']:['أنت','الكافي'];
+function gSc(){const n=gN(gT.m);return `<div>${n[0]} ${gCup}<b>${gT.p}</b></div><div>تعادل<b>${gT.d}</b></div><div>${n[1]} ${gPlm}<b>${gT.c}</b></div>`}
+function gScU(){const s=document.getElementById('gsc');if(s)s.innerHTML=gSc()}
+function gPick(t,f){clearTimeout(gTm);gt.textContent=t;
+gbody.innerHTML=`<p class="gint">مع منو تريد تلعب؟</p><button class="gb" onclick="${f}(0)"><span class="gt" style="font-size:36px">🤖</span><div><b>ضد الجهاز</b><small>تحدَّ نخلة الكافي</small></div><span class="ch" aria-hidden="true">‹</span></button><button class="gb g2" onclick="${f}(1)"><span class="gt" style="font-size:36px">👥</span><div><b>ضد صاحبك</b><small>لاعبين على نفس الجهاز بالدور</small></div><span class="ch" aria-hidden="true">‹</span></button><div class="gf"><button class="gk" onclick="gMenu()">القائمة</button></div>`}
+function gNew(g,m){if(!gT||gT.g!==g||gT.m!==m)gT={g,m,p:0,c:0,d:0,n:0};gT.n++}
+function gXO(m){clearTimeout(gTm);if(m===undefined)return gPick('إكس أو بالقهوة','gXO');gt.textContent='إكس أو بالقهوة';gNew('xo',m);
+let b=Array(9).fill(''),end=false,busy=false,turn=(m&&gT.n%2==0)?'🌴':'☕';const win=x=>GL.find(l=>l.every(i=>b[i]==x));
+const tm=()=>m?'دور '+(turn=='☕'?'اللاعب ١ ☕':'اللاعب ٢ 🌴'):'دورك، ابدأ بفنجانك';
+gbody.innerHTML=`<div class="gs" id="gsc">${gSc()}</div><div class="gg g3" id="gg">${b.map((_,i)=>`<button class="gx" aria-label="خانة ${i+1}"></button>`).join('')}</div><div class="gm" id="gmsg" aria-live="polite">${tm()}</div><div class="gf"><button class="gk pr" onclick="gXO(${m})">جولة جديدة</button><button class="gk" onclick="gXO()">تغيير الوضع</button><button class="gk" onclick="gMenu()">القائمة</button></div>`;
 const cs=[...gg.children];
-const fin=()=>{const w=win('☕')||win('🌴');if(w){end=true;gT[b[w[0]]=='☕'?'p':'c']++;w.forEach(i=>cs[i].classList.add('w'));gmsg.textContent=b[w[0]]=='☕'?'فزت! قهوتك الأقوى ☕':'فاز الكافي هذه المرة 🌴';return true}
-if(b.every(x=>x)){end=true;gT.d++;gmsg.textContent='تعادل، جولة أخرى؟';return true}return false};
-const put=(i,m)=>{b[i]=m;cs[i].textContent=m;cs[i].disabled=true};
-const pick=()=>{const t=m=>{for(const l of GL){const v=l.map(i=>b[i]);if(v.filter(x=>x==m).length==2&&v.includes(''))return l[v.indexOf('')]}return -1};
+const fin=()=>{const w=win('☕')||win('🌴');if(w){end=true;const a=b[w[0]]=='☕';gT[a?'p':'c']++;w.forEach(i=>cs[i].classList.add('w'));gmsg.className='gm win';gmsg.textContent=m?(a?'فاز اللاعب ١ ☕':'فاز اللاعب ٢ 🌴'):(a?'فزت! قهوتك الأقوى ☕':'فاز الكافي هذه المرة 🌴');return true}
+if(b.every(x=>x)){end=true;gT.d++;gmsg.className='gm win';gmsg.textContent='تعادل، جولة أخرى؟';return true}return false};
+const put=(i,x)=>{b[i]=x;cs[i].innerHTML=x=='☕'?gCup:gPlm;cs[i].disabled=true};
+const pick=()=>{const t=x=>{for(const l of GL){const v=l.map(i=>b[i]);if(v.filter(y=>y==x).length==2&&v.includes(''))return l[v.indexOf('')]}return -1};
 let x=t('🌴');if(x<0&&Math.random()>.3)x=t('☕');if(x<0&&!b[4])x=4;if(x<0){const c=[0,2,6,8].filter(i=>!b[i]);if(c.length)x=c[Math.floor(Math.random()*c.length)]}
 if(x<0){const e=b.map((v,i)=>v?-1:i).filter(i=>i>=0);x=e[Math.floor(Math.random()*e.length)]}return x};
-cs.forEach((c,i)=>c.onclick=()=>{if(end||busy||b[i])return;put(i,'☕');if(fin()){if(!gov.hidden)gXOsc();return}busy=true;gmsg.textContent='دور الكافي...';
-gTm=setTimeout(()=>{put(pick(),'🌴');busy=false;if(fin())gXOsc();else gmsg.textContent='دورك'},450)});
-function gXOsc(){const s=gbody.querySelector('.gi span');if(s)s.textContent=`أنت ☕ ${gT.p} · الكافي 🌴 ${gT.c} · تعادل ${gT.d}`}}
+cs.forEach((c,i)=>c.onclick=()=>{if(end||busy||b[i])return;
+if(m){put(i,turn);if(fin()){gScU();return}turn=turn=='☕'?'🌴':'☕';gmsg.textContent=tm();return}
+put(i,'☕');if(fin()){gScU();return}busy=true;gmsg.textContent='دور الكافي...';
+gTm=setTimeout(()=>{put(pick(),'🌴');busy=false;if(fin())gScU();else gmsg.textContent='دورك'},450)})}
+
+function gC4(m){clearTimeout(gTm);if(m===undefined)return gPick('أربعة بصف','gC4');gt.textContent='أربعة بصف';gNew('c4',m);
+const R=6,C=7;let b=Array.from({length:C},()=>[]),turn=(m&&gT.n%2==0)?2:1,end=false,busy=false;
+const at=(d,c,r)=>c<0||c>=C||r<0||r>=R?0:(d[c][r]||0),D=[[1,0],[0,1],[1,1],[1,-1]];
+const wn=d=>{for(let c=0;c<C;c++)for(let r=0;r<R;r++){const p=at(d,c,r);if(!p)continue;for(const[x,y]of D){let k=1;while(k<4&&at(d,c+x*k,r+y*k)==p)k++;if(k==4)return[0,1,2,3].map(k=>[c+x*k,r+y*k])}}return null};
+const sc=()=>{let s=0;for(let r=0;r<R;r++){const p=at(b,3,r);if(p==2)s+=3;else if(p==1)s-=3}
+for(let c=0;c<C;c++)for(let r=0;r<R;r++)for(const[x,y]of D){let a=0,h=0,e=0;for(let k=0;k<4;k++){const p=at(b,c+x*k,r+y*k);if(c+x*k<0||c+x*k>=C||r+y*k<0||r+y*k>=R){a=-9;break}p==2?a++:p==1?h++:e++}
+if(a<0)continue;if(a==3&&e==1)s+=5;else if(a==2&&e==2)s+=2;if(h==3&&e==1)s-=6;else if(h==2&&e==2)s-=2}return s};
+const O=[3,2,4,1,5,0,6];
+const mx=(d,al,be,max)=>{if(wn(b))return max?-1e4-d:1e4+d;if(b.every(x=>x.length>=R))return 0;if(!d)return sc();let best=max?-1e9:1e9;
+for(const c of O){if(b[c].length>=R)continue;b[c].push(max?2:1);const v=mx(d-1,al,be,!max);b[c].pop();if(max){best=Math.max(best,v);al=Math.max(al,v)}else{best=Math.min(best,v);be=Math.min(be,v)}if(al>=be)break}return best};
+const ai=()=>{const ok=O.filter(c=>b[c].length<R);if(Math.random()<.15)return ok[Math.floor(Math.random()*ok.length)];let bs=-1e9,bc=ok[0];
+for(const c of ok){b[c].push(2);const v=mx(3,-1e9,1e9,false)+Math.random()*.5;b[c].pop();if(v>bs){bs=v;bc=c}}return bc};
+const tm=()=>m?'دور '+(turn==1?'اللاعب ١ ☕':'اللاعب ٢ 🌴'):'دورك ☕';
+gbody.innerHTML=`<div class="gs" id="gsc">${gSc()}</div><div class="c4" id="gg">${Array.from({length:C},(_,c)=>`<button class="c4c" aria-label="عمود ${c+1}">${Array.from({length:R},()=>'<span class="c4d"></span>').join('')}</button>`).join('')}</div><div class="gm" id="gmsg" aria-live="polite">${tm()}</div><div class="gf"><button class="gk pr" onclick="gC4(${m})">جولة جديدة</button><button class="gk" onclick="gC4()">تغيير الوضع</button><button class="gk" onclick="gMenu()">القائمة</button></div>`;
+const cell=(c,r)=>gg.children[c].children[R-1-r];
+const place=c=>{const p=turn,r=b[c].length;b[c].push(p);const e=cell(c,r);e.classList.add('p'+p);e.textContent=p==1?'☕':'🌴';
+const w=wn(b);if(w){end=true;w.forEach(([x,y])=>cell(x,y).classList.add('w'));gT[p==1?'p':'c']++;gmsg.className='gm win';gmsg.textContent=m?(p==1?'فاز اللاعب ١ ☕':'فاز اللاعب ٢ 🌴'):(p==1?'فزت! 🎉':'فاز الكافي 🌴');gScU();return}
+if(b.every(x=>x.length>=R)){end=true;gT.d++;gmsg.className='gm win';gmsg.textContent='تعادل!';gScU();return}
+turn=3-p;gmsg.textContent=m?tm():(turn==2?'دور الكافي...':tm())};
+[...gg.children].forEach((el,c)=>el.onclick=()=>{if(end||busy||b[c].length>=R)return;if(!m&&turn!=1)return;place(c);
+if(!m&&!end){busy=true;gTm=setTimeout(()=>{place(ai());busy=false},500)}});
+if(!m&&turn==2){busy=true;gTm=setTimeout(()=>{place(ai());busy=false},500)}}
+
+function gRPS(m){clearTimeout(gTm);if(m===undefined)return gPick('حجر ورقة مقص','gRPS');gt.textContent='حجر ورقة مقص';gNew('rps',m);
+const E={r:'🪨',p:'📄',s:'✂️'},W={r:'s',p:'r',s:'p'};let p1=null,lock=false;
+gbody.innerHTML=`<div class="gs" id="gsc">${gSc()}</div><div class="rv" id="rv">❔</div><div class="gm" id="gmsg" aria-live="polite">${m?'اللاعب ١ يختار (لا تخلي صاحبك يشوف)':'اختر حركتك'}</div><div class="rps" id="rps">${Object.keys(E).map(k=>`<button data-k="${k}" aria-label="${E[k]}">${E[k]}</button>`).join('')}</div><div class="gf"><button class="gk" onclick="gRPS()">تغيير الوضع</button><button class="gk" onclick="gMenu()">القائمة</button></div>`;
+const res=(a,b)=>{rv.innerHTML=`<span>${E[a]}</span><small>ضد</small><span>${E[b]}</span>`;gmsg.className='gm win';
+if(a==b){gT.d++;gmsg.textContent='تعادل!'}else if(W[a]==b){gT.p++;gmsg.textContent=m?'فاز اللاعب ١ 🎉':'فزت! 🎉'}else{gT.c++;gmsg.textContent=m?'فاز اللاعب ٢ 🎉':'فاز الكافي 🌴'}gScU();p1=null;lock=true;
+gTm=setTimeout(()=>{lock=false;gmsg.className='gm';gmsg.textContent=m?'اللاعب ١ يختار (لا تخلي صاحبك يشوف)':'جولة جديدة، اختر حركتك';rv.textContent='❔'},1800)};
+[...rps.children].forEach(el=>el.onclick=()=>{if(lock)return;const k=el.dataset.k;
+if(!m){res(k,'rps'[Math.floor(Math.random()*3)]);return}
+if(!p1){p1=k;rv.textContent='🙈';gmsg.className='gm';gmsg.textContent='اللاعب ٢ يختار الآن'}else res(p1,k)})}
 
 let tT=0;
-function tst(i){const x=P[i],k=Object.keys(cart),it=k.reduce((a,j)=>a+cart[j],0),tot_=k.reduce((a,j)=>a+P[j].p*cart[j],0);
+function tst(i,o){const x=P[i],k=Object.keys(cart),it=k.reduce((a,j)=>a+cart[j],0),tot_=k.reduce((a,j)=>a+P[pi(j)].p*cart[j],0);
 tth.className='tth k'+D.findIndex(d=>d[0]==x.c)+(x.img?' hasimg':'');tth.innerHTML=x.img?`<img src="${x.img}" alt="">`:x.e;
-tsm.textContent=x.n;tss.textContent='في السلة '+nf(it,0)+' · '+f(tot_);ts.classList.add('on');
+tsm.textContent=x.n+(o>=0&&x.o?" - "+x.o[o]:"");tss.textContent='في السلة '+nf(it,0)+' · '+f(tot_);ts.classList.add('on');
 tbar.style.animation='none';void tbar.offsetWidth;tbar.style.animation='';
 [cnt,cnt2].forEach(e=>{e.classList.remove('bp');void e.offsetWidth;e.classList.add('bp')});clearTimeout(tT);tT=setTimeout(()=>ts.classList.remove('on'),3200)}
 
