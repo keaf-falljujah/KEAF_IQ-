@@ -245,7 +245,15 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-43px;height:44px
 @media(prefers-reduced-motion:reduce){.c4d.p1,.c4d.p2{animation:none}}
 button.add:disabled,#mab:disabled,#gob:disabled{opacity:.5;cursor:not-allowed}
 @media(max-width:600px){.mrow{gap:8px}#mab{min-width:0;white-space:normal;line-height:1.25;padding-block:9px;text-align:center}}
-@media(max-width:360px){#mab{font-size:13px;padding-inline:8px}.mrow .stp{flex-shrink:0}}</style></head><body>
+@media(max-width:360px){#mab{font-size:13px;padding-inline:8px}.mrow .stp{flex-shrink:0}}
+/* منع توسّع الشبكة بسبب حجم الصور الأصلي (سفاري iOS) */
+.g>*,.p{min-width:0;max-width:100%}
+.g{grid-template-columns:repeat(auto-fill,minmax(min(210px,100%),1fr))}
+@media(max-width:520px){.g{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.ph{overflow:hidden;min-width:0}
+.ph>img{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;max-width:100%;object-fit:contain}
+body{overflow-x:clip}
+</style></head><body>
 <svg width="0" height="0" style="position:absolute"><symbol id="palm" viewBox="0 0 100 80"><path d="M50 36C30 24 14 26 3 36C22 30 38 34 50 36ZM50 36C70 24 86 26 97 36C78 30 62 34 50 36ZM50 36C40 22 28 10 14 6C32 12 44 24 50 36ZM50 36C60 22 72 10 86 6C68 12 56 24 50 36ZM50 36C42 46 38 60 42 76C50 62 54 48 50 36ZM50 36C58 46 62 60 58 76C50 62 46 48 50 36Z"/></symbol><symbol id="cup" viewBox="0 0 100 80"><path d="M16 26h58v18a24 24 0 0 1-24 24H40a24 24 0 0 1-24-24zM74 31h5a10 10 0 0 1 0 20h-9v-6h9a4 4 0 0 0 0-8h-5zM8 70h74v6H8zM34 4c-5 5 5 8 0 14h5c5-6-5-9 0-14zM50 2c-5 5 5 8 0 14h5c5-6-5-9 0-14z"/></symbol></svg>
 <header><div class="bar">
 <a class="lg" href="#/" data-r="home"><img decoding="async" src="images/img03.webp" alt="كيف KEAF Coffee House"></a>
