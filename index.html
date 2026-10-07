@@ -301,14 +301,14 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-43px;height:44px
 <div id="gov" class="ov" hidden onclick="if(event.target===this)gClose()"><div class="mdl" role="dialog" aria-modal="true" aria-labelledby="gt"><div class="dh"><h2 id="gt">ألعاب كيف</h2><button class="xb" id="gx" onclick="gClose()" aria-label="إغلاق">×</button></div><div id="gbody"></div></div></div>
 <aside id="dr" aria-label="سلة التسوق">
 <div class="dh"><h2 id="dt">سلة التسوق</h2><button class="xb" onclick="tog()" aria-label="إغلاق">×</button></div>
-<div class="v on" id="v1"><div id="its"></div><button type="button" class="clrb" id="cbtn" onclick="clrC(1)" hidden>إفراغ السلة</button><div id="cfm" hidden><span>إفراغ كل الأصناف؟</span><button type="button" class="cy" onclick="clrC(2)">نعم، أفرغ</button><button type="button" class="cn" onclick="clrC(0)">إلغاء</button></div><div class="dnote"><span aria-hidden="true">🛵</span><span>سعر التوصيل 2000 دينار</span></div><div class="tot"><span>المجموع الكلي</span><span id="tot"></span></div><button class="btn cb" id="gob" onclick="sv(2)">متابعة الطلب</button></div>
+<div class="v on" id="v1"><div id="its"></div><button type="button" class="clrb" id="cbtn" onclick="clrC(1)" hidden>إفراغ السلة</button><div id="cfm" hidden><span>إفراغ كل الأصناف؟</span><button type="button" class="cy" onclick="clrC(2)">نعم، أفرغ</button><button type="button" class="cn" onclick="clrC(0)">إلغاء</button></div><div class="dnote"><span aria-hidden="true">🛵</span><span>سعر التوصيل 2000 دينار (يُضاف للمجموع الكلي)</span></div><div class="tot"><span>المجموع الكلي</span><span id="tot"></span></div><button class="btn cb" id="gob" onclick="sv(2)">متابعة الطلب</button></div>
 <form class="v" id="v2" novalidate onsubmit="return sub(event)">
 <div class="ff"><label for="fn">الاسم (اختياري)</label><input class="fi" id="fn" autocomplete="name" placeholder="اسمك الكامل"><span class="er" id="en"></span></div>
 <div class="ff"><label for="fp">رقم الهاتف</label><input class="fi" id="fp" type="tel" inputmode="tel" autocomplete="tel" placeholder="07XXXXXXXXX" dir="ltr" style="text-align:right"><span class="er" id="ep"></span></div>
 <div class="ff"><label for="fo">طريقة الاستلام</label><select class="fi" id="fo" onchange="document.getElementById('fa').closest('.ff').style.display=this.value=='1'?'none':''"><option value="0">توصيل</option><option value="1">استلام من المحل</option></select></div>
 <div class="ff"><label for="fa">عنوان التوصيل</label><textarea class="fi" id="fa" rows="2" autocomplete="street-address" placeholder="المدينة، المنطقة، أقرب نقطة دالة"></textarea><span class="er" id="ea"></span></div>
 <div class="ff"><label for="fm">ملاحظات (اختياري)</label><textarea class="fi" id="fm" rows="2" placeholder="مثلاً: بدون سكر، أو موعد التوصيل المناسب"></textarea></div>
-<p class="minf" id="hrs2"></p><div class="tot"><span>المجموع الكلي</span><span id="tot2"></span></div>
+<p class="minf" id="hrs2"></p><div class="tot" style="font-weight:400;margin:10px 0 0"><span>سعر التوصيل</span><span id="dfee"></span></div><div class="tot"><span>المجموع الكلي</span><span id="tot2"></span></div>
 <button class="btn cb" id="sb">تأكيد الطلب</button><button type="button" class="btn gh2" onclick="sv(1)">رجوع للسلة</button></form>
 <div class="v" id="v3"><div id="ok"></div><button class="btn cb" onclick="tog()">إغلاق</button></div>
 </aside>
@@ -421,6 +421,7 @@ P.find(x=>x.n=="فرابيه بستاشيو").img="images/img95.webp";
 P.find(x=>x.n=="فرابيه كراميل").img="images/img96.webp";
 P.find(x=>x.n=="فرابيه فانيلا").img="images/img97.webp";
 P.find(x=>x.n=="فرابيه موكا").img="images/img98.webp";
+CI["المعجنات"]="images/pastries.webp";
 const PAR={"الكريب":"الحلى","الكيك":"الحلى"};
 const C=[["","🍽️","الكل"],...D.filter(([c])=>!PAR[c]).map(([c,e])=>[c,e]),["الحلى","🍰"]];let cat="",cart={},view=1,busy=false;
 const pi=k=>parseInt(k),po=k=>{const t=String(k).split("_");return t.length>1?+t[1]:-1},kn=k=>P[pi(k)].n+(po(k)>=0?" - "+P[pi(k)].o[po(k)]:"");
@@ -437,11 +438,13 @@ function draw(){drawFeat();drawMenu()}
 function setCat(c){cat=c;drawMenu()}
 function add(i){if(P[i].o){mo(i);return}cart[i]=(cart[i]||0)+1;upd();if(view!=1)sv(1);tst(i)}
 function chg(k,d){cart[k]+=d;if(cart[k]<1)delete cart[k];upd()}
+const DF=2000;
+function tt(){const k=Object.keys(cart),sb=k.reduce((s,i)=>s+P[pi(i)].p*cart[i],0),pk=fo.value=='1',d=k.length&&!pk?DF:0;tot.textContent=f(sb+(k.length?DF:0));tot2.textContent=f(sb+d);dfee.textContent=pk?'استلام من المحل (بدون توصيل)':f(DF)}
 function upd(){const k=Object.keys(cart);const tc=k.reduce((s,i)=>s+cart[i],0);cnt.textContent=cnt2.textContent=tc;cnt.hidden=cnt2.hidden=!tc;cbtn.hidden=!k.length;if(!k.length)cfm.hidden=true;
 its.innerHTML=k.length?k.map(i=>`<div class="it"><div class="t">${P[pi(i)].e}</div><div>${kn(i)}<br><small>${P[pi(i)].c}</small><br><b>${f(P[pi(i)].p)}</b></div><div class="q"><button onclick="chg('${i}',1)">+</button> ${cart[i]} <button onclick="chg('${i}',-1)">−</button></div></div>`).join(""):`<div class="emp2"><svg class="i big" viewBox="0 0 24 24"><path d="M5.2 8.5h13.6l-1.1 10.4a1.6 1.6 0 01-1.6 1.4H7.9a1.6 1.6 0 01-1.6-1.4z"/><path d="M8.8 8.5V7a3.2 3.2 0 016.4 0v1.5"/></svg><p>سلتك فارغة</p><button class="btn" onclick="dr.classList.remove('open');location.hash='#/products'">تصفح المنيو</button></div>`;
-const T=f(k.reduce((s,i)=>s+P[pi(i)].p*cart[i],0));tot.textContent=T;tot2.textContent=T;gob.disabled=!k.length;if(!k.length&&view==2)sv(1);draw()}
+tt();gob.disabled=!k.length;if(!k.length&&view==2)sv(1);draw()}
 function tog(){if(!dr.classList.contains("open")&&view==3)sv(1);dr.classList.toggle("open")}
-upd()
+upd();fo.addEventListener("change",tt)
 
 
 const S=[["قهوة بطعم مختلف","مذاق أصيل .. في كل كوب",""],["مشروبات باردة تنعش يومك","فرابيه وميلك شيك وكولد برو","IMG"],["ميلك شيك بنكهات تسعدك","كريمي وغني .. بأربع نكهات مميزة","MILK"]];let si=0,tm;
@@ -460,10 +463,10 @@ en.textContent='';ep.textContent=(d.length<10||d.length>13)?'اكتب رقم ه�
 fn.classList.toggle('bad',!!en.textContent);fp.classList.toggle('bad',!!ep.textContent);fa.classList.toggle('bad',!!ea.textContent);
 if(en.textContent||ep.textContent||ea.textContent){(en.textContent?fn:ep.textContent?fp:fa).focus();return false}
 if(!k.length){sv(1);return false}
-busy=true;const items=k.map(i=>({n:kn(i),c:P[pi(i)].c,q:cart[i],t:P[pi(i)].p*cart[i]})),total=items.reduce((s,x)=>s+x.t,0),no='K-'+String(Date.now()).slice(-6);
+busy=true;const items=k.map(i=>({n:kn(i),c:P[pi(i)].c,q:cart[i],t:P[pi(i)].p*cart[i]})),sub0=items.reduce((s,x)=>s+x.t,0),dfe=fo.value=='1'?0:DF,total=sub0+dfe,no='K-'+String(Date.now()).slice(-6);
 try{localStorage.setItem('keaf_c',JSON.stringify({n,p,a}))}catch(x){}
-ok.innerHTML=`<div class="okc">✓</div><h3 style="text-align:center;margin:0">${n?"شكراً "+esc(n):"شكراً لك"}</h3><p style="text-align:center;margin:2px 0 8px">رقم الطلب: <b>${no}</b></p><div class="sm">${items.map(x=>`<div><span>${esc(x.n)} (${esc(x.c)}) × ${x.q}</span><span>${f(x.t)}</span></div>`).join('')}<div style="border-top:1px solid #3a1d0e22;margin-top:4px;padding-top:4px;font-weight:700"><span>المجموع</span><span>${f(total)}</span></div></div>${n?`<p class="dtl"><b>الاسم:</b> ${esc(n)}</p>`:""}<p class="dtl"><b>الهاتف:</b> <span dir="ltr">${esc(p)}</span></p><p class="dtl"><b>${fo.value=='1'?'الطلب':'العنوان'}:</b> ${fo.value=='1'?'استلام من المحل':esc(a)}</p>${m?`<p class="dtl"><b>ملاحظات:</b> ${esc(m)}</p>`:''}`;
-const pk=fo.value=='1',msg='طلب جديد من موقع كيف\nرقم الطلب: '+no+'\n\n'+items.map(x=>'• '+x.n+' × '+x.q+' = '+f(x.t)).join('\n')+'\n\nالمجموع: '+f(total)+'\n'+(n?'الاسم: '+n+'\n':'')+'الهاتف: '+p+'\n'+(pk?'الطلب: استلام من المحل':'العنوان: '+a)+(m?'\nملاحظات: '+m:''),u=waUrl(msg);
+ok.innerHTML=`<div class="okc">✓</div><h3 style="text-align:center;margin:0">${n?"شكراً "+esc(n):"شكراً لك"}</h3><p style="text-align:center;margin:2px 0 8px">رقم الطلب: <b>${no}</b></p><div class="sm">${items.map(x=>`<div><span>${esc(x.n)} (${esc(x.c)}) × ${x.q}</span><span>${f(x.t)}</span></div>`).join('')}<div style="border-top:1px solid #3a1d0e22;margin-top:4px;padding-top:4px"><span>المجموع</span><span>${f(sub0)}</span></div>${dfe?`<div><span>سعر التوصيل</span><span>${f(dfe)}</span></div>`:''}<div style="font-weight:700"><span>المجموع الكلي</span><span>${f(total)}</span></div></div>${n?`<p class="dtl"><b>الاسم:</b> ${esc(n)}</p>`:""}<p class="dtl"><b>الهاتف:</b> <span dir="ltr">${esc(p)}</span></p><p class="dtl"><b>${fo.value=='1'?'الطلب':'العنوان'}:</b> ${fo.value=='1'?'استلام من المحل':esc(a)}</p>${m?`<p class="dtl"><b>ملاحظات:</b> ${esc(m)}</p>`:''}`;
+const pk=fo.value=='1',msg='طلب جديد من موقع كيف\nرقم الطلب: '+no+'\n\n'+items.map(x=>'• '+x.n+' × '+x.q+' = '+f(x.t)).join('\n')+'\n\nالمجموع: '+f(sub0)+'\n'+(dfe?'سعر التوصيل: '+f(dfe)+'\n':'')+'المجموع الكلي: '+f(total)+'\n'+(n?'الاسم: '+n+'\n':'')+'الهاتف: '+p+'\n'+(pk?'الطلب: استلام من المحل':'العنوان: '+a)+(m?'\nملاحظات: '+m:''),u=waUrl(msg);
 ok.insertAdjacentHTML('beforeend','<a class="btn cb wab" href="'+u+'" target="_blank" rel="noopener">أرسل الطلب عبر واتساب ←</a><p class="minf" style="text-align:center">لا يُعتمد طلبك قبل إرساله عبر واتساب.</p>');
 wo(u);
 cart={};fm.value='';upd();sv(3);busy=false;return false}
